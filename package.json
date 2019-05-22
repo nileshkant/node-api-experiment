@@ -11,6 +11,7 @@
     "yarn": "*"
   },
   "scripts": {
+    "build": "netlify-lambda build express",
     "precommit": "yarn lint",
     "prestart": "yarn docs",
     "start": "cross-env NODE_ENV=production pm2 start ./src/index.js",
