@@ -8,7 +8,7 @@ const service = require('./channelList.service');
  */
 exports.list = async (req, res, next) => {
   try {
-    const response = await service.list();
+    const response = await service.list(Number(req.params.pageno), Number(req.params.pagesize), req.query);
     return res.json(response);
   } catch (error) {
     return next(error);

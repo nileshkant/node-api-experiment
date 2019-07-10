@@ -10,7 +10,7 @@ const router = express.Router();
 
 
 router
-  .route('/')
+  .route('/:pageno/:pagesize')
   .get(controller.list);
 
 module.exports = router;
